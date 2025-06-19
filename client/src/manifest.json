@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "AI Interviewer",
+  "description": "An AI-based coding interviewer extension",
+  "version": "1.0",
+  "permissions": ["scripting", "tabs", "activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/*", "https://codesandbox.io/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}
