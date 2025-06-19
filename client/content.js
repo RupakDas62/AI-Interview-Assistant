@@ -134,7 +134,7 @@ async function speakWithElevenLabs(text) {
     const res = await fetch("http://localhost:8081/api/speak", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text })
+      body: JSON.stringify({ text, elevenKey })
     });
 
     if (!res.ok) {

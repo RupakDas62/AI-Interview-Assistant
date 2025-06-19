@@ -10,14 +10,14 @@ app.use(express.json());
 const PORT = 8081; // can change if needed
 
 app.post('/api/speak', async (req, res) => {
-  const { text } = req.body;
+  const { text, elevenKey } = req.body;
   const voiceId = "pqHfZKP75CvOlQylNhV4";
 
   try {
     const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
       method: 'POST',
       headers: {
-        'xi-api-key': process.env.ELEVENLABS_API_KEY,
+        'xi-api-key': elevenKey,
         'Content-Type': 'application/json',
         'Accept': 'audio/mpeg'
       },
