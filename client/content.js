@@ -1,6 +1,3 @@
-// API KEY ELEVENLABS = sk_00135b1bf021b7c2a50003d55f7cfff6f30e34266ff18373
-// GEMINI API_KEY  =   AIzaSyCby104jwGT67rtNjxRzmZ_IaLQyFzAAao
-
 console.log("🚀 AI Interviewer Loaded");
 
 // Store user interaction state
